@@ -1,0 +1,37 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+#
+# Liang Guo <bluestonechina@gmail.com> 2010
+# YunQiang Su <wzssyqa@gmail.com>, 2012
+#
+# Uncomment this to turn on verbose mode.
+# export DH_VERBOSE=1
+
+# see FEATURE AREAS in dpkg-buildflags(1)
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_LDFLAGS_MAINT_APPEND =
+
+# export buildflags
+DPKG_EXPORT_BUILDFLAGS=1
+-include /usr/share/dpkg/buildflags.mk
+
+include /usr/share/dpkg/architecture.mk
+
+SCONS=scons
+POD2MAN=pod2man
+PROGS=genpyt igetwordfreq dngram_merge slminfo slmseg tslminfo getWordFreq ids2ngram \
+      mmseg slmbuild slmprune slmthread tslmendian tslmpack
+
+%:
+	dh $@
+
+execute_after_dh_auto_clean:
+	scons -c .
+	rm -rf .sconf_temp
+
+override_dh_auto_build:
+	$(SCONS)  --prefix=/usr --libdir=/usr/lib/${DEB_HOST_MULTIARCH}/ --datadir=/usr/lib/${DEB_HOST_MULTIARCH}
+
+override_dh_auto_install:
+	$(SCONS) install --install-sandbox=debian/tmp
+	rm -f debian/tmp/usr/bin/sunpinyin-dictgen

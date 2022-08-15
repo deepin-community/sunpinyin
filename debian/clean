@@ -1,0 +1,9 @@
+man/*.1
+
+python/*.pyc
+python/importer/*.pyc
+config.log
+config.h
+.sconsign.dblite
+configure.conf
+sunpinyin-2.0.pc

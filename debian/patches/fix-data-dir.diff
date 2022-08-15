@@ -1,0 +1,21 @@
+From: Debian Input Method Team <debian-input-method@lists.debian.org>
+Date: Sat, 30 Jun 2018 07:57:33 +0800
+Subject: fix-data-dir
+
+---
+ SConstruct | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/SConstruct b/SConstruct
+index e063c6d..9fce9bf 100644
+--- a/SConstruct
++++ b/SConstruct
+@@ -266,7 +266,7 @@ mandir = os.path.join(env['PREFIX'], 'share/man')
+ man1dir = os.path.join(mandir, 'man1')
+ docdir = os.path.join(env['PREFIX'], 'share/doc/sunpinyin')
+ headersdir = os.path.join(env['PREFIX'], 'include/sunpinyin-2.0')
+-datadir = os.path.join(env['DATADIR'], 'sunpinyin')
++datadir = os.path.join(env['DATADIR'], 'sunpinyin/data')
+ libdir = env['LIBDIR']
+ 
+ # pass through environmental variables
