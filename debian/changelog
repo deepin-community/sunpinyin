@@ -1,3 +1,9 @@
+sunpinyin (3.0.0~rc2.1-deepin1) stable; urgency=medium
+
+  * Normalize ver2 (XdeepinY).
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Tue, 27 Aug 2024 16:06:08 +0800
+
 sunpinyin (3.0.0~rc2.1-deepin) stable; urgency=medium
 
   * ['Autobuild release-candidate']
