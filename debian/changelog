@@ -1,3 +1,9 @@
+sunpinyin (3.0.0~rc2.1-deepin1) unstable; urgency=medium
+
+  * Avoid downgrade.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Wed, 04 Sep 2024 11:15:39 +0800
+
 sunpinyin (3.0.0~rc2+ds1-5) unstable; urgency=medium
 
   * Team upload.
