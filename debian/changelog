@@ -1,3 +1,9 @@
+sunpinyin (3.0.0~rc2.1-deepin2) unstable; urgency=medium
+
+  * feat: add sw64 support.
+
+ -- lichenggang <lichenggang@uniontech.com>  Wed, 06 May 2026 17:38:26 +0800
+
 sunpinyin (3.0.0~rc2.1-deepin1) unstable; urgency=medium
 
   * Avoid downgrade.
